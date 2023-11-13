@@ -12,20 +12,20 @@ class FileStorage():
     """initialization of fileStorage to work"""
 
     __file_path = "file.json"
-    __objects = {}            
+    __objects = {}
 
     def all(self):
         """returns dictionary form of object"""
         return FileStorage.__objects
-    
+
     def new(self, obj):
         """methods sets in the obj with key <obj class name>.id
         which will be appended to __objects dictionary
         """
         obj_key = "{}.{}".format(obj.__class__.__name__, obj.id)
-    
+
     def save(self):
-        """serializes __objects to the 
+        """serializes __objects to the
         JSON file (path: __file_path)
         """
         a_dictionary = {}
@@ -35,11 +35,11 @@ class FileStorage():
             json.dump(a_dictionary, file)
 
     def reload(self):
-         """deserializes the JSON file to __objects 
-         (only if the JSON file (__file_path) exists ;
-         """
-         try:
-            with open(FileStorage.__file_path, "r") as file:
-                a_dictionary = json.load(FileStorage.__file_path)
-        except Exception as error:
-            pass
+        """deserializes the JSON file to __objects
+        (only if the JSON file (__file_path) exists
+        """
+        with open(FileStorage.__file_path, "r") as file:
+            a_dictionary = json.load(file)
+            a_dictionary = {k: self.classes()[v["__class__"]](**v)
+                            for k, v in a_dictionary.items()}
+            FileStorage.__objects = a_dictionary
