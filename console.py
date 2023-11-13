@@ -15,8 +15,7 @@ import cmd
 
 
 class HBNBCommand(cmd.Cmd):
-    """
-    start of the cmd
+    """start point of the cmd
     """
     prompt = "(hbnb)"
     classes = (
@@ -31,32 +30,27 @@ class HBNBCommand(cmd.Cmd):
     objects = storage.all()
 
     def do_EOF(self, line):
-        """
-        EOF command to leave the program
+        """EOF command to exit the program
         """
         return True
 
     def do_quit(self, line):
-        """
-        Quit command to quit(exit) the program
+        """Quit command to exit the program
         """
         return True
 
     def do_emptyline():
-        """
-        do nothing when an empty line is inputed
+        """do nothing when an empty line is inputed
         """
         pass
     
     def postloop(self):
-        """
-        do nothing after each console loop
+        """do nothing after each console loop
         """
         pass
 
     def do_create(self, lines):
-        """
-        create a new class instance
+        """create a new instance of a class
         """
         line = lines.split()
         if not HBNBCommand.check_class(line):
@@ -67,8 +61,7 @@ class HBNBCommand(cmd.Cmd):
         print(new_instance.id)
 
     def do_show(self, args):
-        """
-        print string representation of instance
+        """print string representation of instance
         """
         arg = args.split()
         if not HBNBCommand.check_class(arg):
@@ -79,15 +72,14 @@ class HBNBCommand(cmd.Cmd):
         print(HBNBCommand.objects[key])
 
     def do_destroy(self, args):
+        """delete an instance based on class name and id
         """
-        delete an instance based on class name and id
-        """
-        args = args.split()
-        if not HBNBCommand.check_class(args):
+        arg = args.split()
+        if not HBNBCommand.check_class(arg):
             return
-        if not HBNBCommand.check_id(args):
+        if not HBNBCommand.check_id(arg):
             return
-        key = "{}.{}".format(args[0], args[1])
+        key = "{}.{}".format(arg[0], arg[1])
         del HBNBCommand.objects[key]
         storage.save()
 
@@ -110,7 +102,7 @@ class HBNBCommand(cmd.Cmd):
         print(str_lst)
 
     def do_update(self, arg):
-        """Update command to update instances
+        """update instances
         """
         args = arg.split()
         if "\"" in args[1] or "\"" in args[2]:
@@ -139,7 +131,7 @@ class HBNBCommand(cmd.Cmd):
         instance.save()
 
     def default(self, args):
-        """Default method that is called when the inputted command starts
+        """called when the inputted command starts
         with a class name.
         """
         line = args.split("(")
@@ -170,7 +162,7 @@ class HBNBCommand(cmd.Cmd):
                                    temp[0] + " " + temp[1] + " " + temp[2])
 
     def check_class(args):
-        """check if a class was passed and exists
+        """if a class was passed and exists
         """
         if len(args) < 1:
             print("** class name missing **")
