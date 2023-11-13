@@ -18,15 +18,15 @@ class HBNBCommand(cmd.Cmd):
     """start point of the cmd
     """
     prompt = "(hbnb)"
-    classes = (
-            "BaseModel",
-            "User",
-            "State",
-            "City",
-            "Amenity",
-            "Place",
-            "Review",
-            )
+    classes = {
+            "BaseModel": BaseModel,
+            "User": User,
+            "State": State,
+            "City": City,
+            "Amenity": Amenity,
+            "Place": Place,
+            "Review": Review,
+            }
     objects = storage.all()
 
     def do_EOF(self, line):
