@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-
-from base_model import BaseModel
+""" Module for place in airbnb clone"""
+from models.base_model import BaseModel
 
 
 class Place(BaseModel):
-    """information for places"""
+    """information for places to live"""
     city_id = ""
     user_id = ""
     name = ""

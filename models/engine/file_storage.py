@@ -15,13 +15,16 @@ Module to store data created in python program
 and to help in serialization and deserialization
 """
 
-classes = {"BaseModel": BaseModel,
-                "User": User,
-                "State": State,
-                "City": City,
-                "Amenity": Amenity,
-                "Place": Place,
-                "Review": Review}
+classes = {
+        "BaseModel": BaseModel,
+        "User": User,
+        "State": State,
+        "City": City,
+        "Amenity": Amenity,
+        "Place": Place,
+        "Review": Review
+        }
+
 
 class FileStorage():
     """initialization of fileStorage to work"""

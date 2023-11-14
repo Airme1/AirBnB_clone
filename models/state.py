@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-
-from base_model import BaseModel
+"""Class to provide state"""
+from models.base_model import BaseModel
 
 
 class State(BaseModel):
-    """information for states"""
+    """information for state objects"""
     name = ""

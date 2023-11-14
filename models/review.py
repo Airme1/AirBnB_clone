@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-
-from base_model import BaseModel
+"""This is for users review on airbnb"""
+from models.base_model import BaseModel
 
 
 class Review(BaseModel):

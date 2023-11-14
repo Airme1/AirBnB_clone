@@ -14,8 +14,7 @@ from models.base_model import BaseModel
 
 
 class TestAmenity(unittest.TestCase):
-
-    """Test Cases for the Amenity class."""
+    """Test Cases for the Amenity class"""
 
     def setUp(self):
         """Sets up test methods."""

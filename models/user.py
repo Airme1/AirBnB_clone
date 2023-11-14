@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-
-from base_model import BaseModel
-
+"""Module for User class"""
+from models.base_model import BaseModel
 
 class User(BaseModel):
     """information of User stored"""

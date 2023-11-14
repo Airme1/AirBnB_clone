@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-
-from base_model import BaseModel
+"""Create Amenity class for aibnb"""
+from models.base_model import BaseModel
 
 
 class Amenity(BaseModel):
