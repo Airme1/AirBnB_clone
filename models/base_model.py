@@ -9,8 +9,7 @@ The Grandpa of all the Classes from which other classes
 inherit their properties from
 """
 
-
-class BaseModel():
+class BaseModel:
     """The Backbone of the other classes"""
     def __init__(self, *args, **kwargs):
         """Initializer for the class"""
@@ -19,8 +18,7 @@ class BaseModel():
             for key, value in kwargs.items():
                 if key != "__class__":
                     if key == "created_at" or key == "updated_at":
-                        self.__dict__[key] = datetime.strptime(
-                            value, format_string)
+                        self.__dict__[key] = datetime.strptime(value, format_string)
                     else:
                         self.__dict__[key] = value
         else:
@@ -29,9 +27,9 @@ class BaseModel():
             self.updated_at = datetime.now()
 
     def __str__(self):
-        """To return properties of class_name, id and dictionary"""
+        """Returns a string representation of the instance"""
         return "[{}] ({}) {}".format(self.__class__.__name__,
-                                     self.id, self.__dict__)
+                             self.id, self.__dict__)
 
     def save(self):
         """to save object"""
