@@ -1,0 +1,12 @@
+div{
+    background-color: #00ff00;
+    height: 60px;
+    width: 100%;
+    text-align: center;
+    margin-top: 80vh;
+}
+
+footer{
+    margin: 0;
+    padding: 1.5em;
+}
