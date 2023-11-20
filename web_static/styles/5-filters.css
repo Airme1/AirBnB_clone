@@ -1,0 +1,32 @@
+
+
+.filters{
+    display: flex;
+    height: 70px;
+    background-color: white;
+    width: 100%;
+    border-radius: 4px;
+    align-items: center;
+}
+
+
+.filters button{
+    font-size: 18px;
+    background-color: #ff5a5f;
+    color: #ffffff;
+    height: 48px;
+    border: 0;
+    border-radius: 4px;
+    width: 20%;
+    margin-left: 25%;
+}
+
+.locations, .amenities{
+    height: 100%;
+    width: 25%;
+    border-right: 1px solid #dddddd;
+}
+
+.filters button:hover{
+    opacity: 90%;
+}
