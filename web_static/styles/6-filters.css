@@ -28,3 +28,20 @@
 .filters button:hover{
     opacity: 90%;
 }
+
+.locations .popover,
+.amenities .popover{
+    display: none;
+    background-color: #fafafa;
+    width: 80%;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    list-style-type: none;
+}
+
+.locations:hover > .popover,
+.amenities:hover > .popover{
+    display: block;
+}
+
+
