@@ -4,7 +4,8 @@
     height: 60px;
     width: 100%;
     text-align: center;
-    margin-top: 81.0vh;
+    margin-top: auto;
+    /* min-height: 100vh; */
 }
 
 footer{
