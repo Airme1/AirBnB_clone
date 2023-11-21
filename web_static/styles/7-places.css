@@ -1,0 +1,18 @@
+article{
+    display: flex;
+    /* flex: 1; */
+    flex-wrap: wrap;
+}
+
+article div{
+    width: 390px;
+    border: #ff5a5f 1px solid;
+    border-radius: 4px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+}
+
+.places{
+    font-size: 30px;
+}
